@@ -9,6 +9,7 @@ c = True
 #4. Строкового типа:
 d = "Привет мир"
 #5. Пустого типа:
+e = None
 
 
 #Вывести все их типы.
@@ -16,3 +17,4 @@ print(type(a))
 print(type(b))
 print(type(c))
 print(type(d))
+print(type(e))
