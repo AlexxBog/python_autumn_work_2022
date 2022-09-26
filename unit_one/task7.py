@@ -19,4 +19,6 @@ if ab >= 0:
 	print("Сумма отрезков AB и BC", ab_bc)
 else:
 	print("Сумма отрезков AB и BC", ab_bc * -1)
-
+print("Тип данных ab", type(ab))
+print("Тип данных bc", type(bc))
+print("Тип данных ab_bc", type(ab_bc))
