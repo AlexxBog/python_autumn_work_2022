@@ -4,6 +4,12 @@
 # для введеных исходных данных является истинным, и значение False в противном случае.
 namber_a = int(input("Введите числло А: "))
 if (namber_a % 2) == 0:
-   print("True")
+   print("Число четное", "True")
 else:
-   print("False")
+   print("Число нечетное", "False")
+
+namber_b = int(input("Введите числло А: "))
+if (namber_b % 2) != 0:
+   print("Число нечетное", "True")
+else:
+   print("Число четное", "False")
