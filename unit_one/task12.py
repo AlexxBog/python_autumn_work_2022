@@ -16,5 +16,22 @@
 #>1
 
 #Ответ: 1000 кг
-
-
+weight = int(input("Введите единицу измерения массы: "))
+match weight:
+    case 1:
+        a = int(input("Введите массу тела: "))
+        print(a, " кг")
+    case 2:
+        b = int(input("Введите массу тела: "))
+        print(b / 1_000_000, " кг")
+    case 3:
+        c = int(input("Введите массу тела: "))
+        print(c / 1000, " кг")
+    case 4:
+        d = int(input("Введите массу тела: "))
+        print(d * 1000, " кг")
+    case 5:
+        e = int(input("Введите массу тела: "))
+        print(e * 100, " кг")
+    case _:
+        print("Error")
