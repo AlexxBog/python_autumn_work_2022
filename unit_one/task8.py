@@ -18,20 +18,31 @@ c = 7
 # B = 7
 # C = 10
 
-a = int(input('Введите А '))
-b = int(input('Введите Б '))
-c = int(input('Введите С '))
-if a >= b and a >= c and b >= c:
-    print(c, a, b)
-elif a >= b and a >= c and b <= c:
-    print(b, c, a)
-elif b >= a and b >= c and a >= c:
-    print(c, a, b)
-elif b >= a and b >= c and a <= c:
-    print(a, c, b)
-elif c >= a and c >= b and a >= b:
-    print(b, a, c)
-elif c >= a and c >= b and a <= b:
-    print(a, b, c)
+a = 10
+b = 3
+c = 7
 
-
+if a > b and a > c and b > c:
+    print('A = ', c)
+    print('B = ', b)
+    print('C = ', a)
+elif a > b and a > c and b < c:
+    print('A = ', b)
+    print('B = ', c)
+    print('C = ', a)
+elif b > a and b > c and a > c:
+    print('A = ', c)
+    print('B = ', a)
+    print('C = ', b)
+elif b > a and b > c and c > a:
+    print('A = ', a)
+    print('B = ', c)
+    print('C = ', b)
+elif c > a and c > b and a > b:
+    print('A = ', b)
+    print('B = ', a)
+    print('C = ', c)
+elif c > a and c > b and b > a:
+    print('A = ', a)
+    print('B = ', b)
+    print('C = ', c)
