@@ -21,3 +21,9 @@ template = """
  </body>
 </html>
 """
+
+file = open("index.html", "w")
+val = page.values()
+for i in val:
+
+

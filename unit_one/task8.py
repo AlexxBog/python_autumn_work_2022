@@ -1,9 +1,9 @@
 #todo: Даны переменные A, B, C. Написать код который меняет местами переменные таким образом
 # чтобы значения в переменных были расположены по возрастанию
 # Пример 1:
-a = 10
-b = 3
-c = 7
+#a = 10
+#b = 3
+#c = 7
 # Итоговый результат должен быть:
 # A = 3
 # B = 7
@@ -23,24 +23,41 @@ b = 3
 c = 7
 
 if a > b and a > c and b > c:
-    print('A = ', c)
-    print('B = ', b)
-    print('C = ', a)
-elif a > b and a > c and b < c:
-    print('A = ', b)
-    print('B = ', c)
-    print('C = ', a)
-elif b > a and b > c and a > c:
-    print('A = ', c)
-    print('B = ', a)
-    print('C = ', b)
-elif b > a and b > c and c > a:
+    a_1 = a
+    a = c
+    c = a_1
     print('A = ', a)
-    print('B = ', c)
-    print('C = ', b)
+    print('B = ', b)
+    print('C = ', c)
+elif a > b and a > c and b < c:
+    a_1 = a
+    a = b
+    b = c
+    c = a_1
+    print('A = ', a)
+    print('B = ', b)
+    print('C = ', c)
+elif b > a and b > c and a > c:
+    a_1 = a
+    a = c
+    c = b
+    b = a_1
+    print('A = ', a)
+    print('B = ', b)
+    print('C = ', c)
+elif b > a and b > c and c > a:
+    b_1 = b
+    b = c
+    c = b_1
+    print('A = ', a)
+    print('B = ', b)
+    print('C = ', c)
 elif c > a and c > b and a > b:
-    print('A = ', b)
-    print('B = ', a)
+    z = a
+    a = b
+    b = z
+    print('A = ', a)
+    print('B = ', b)
     print('C = ', c)
 elif c > a and c > b and b > a:
     print('A = ', a)

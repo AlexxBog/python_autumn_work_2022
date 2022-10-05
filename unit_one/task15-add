@@ -24,38 +24,3 @@
 #Нет такой буквы.
 #У вас осталось 9 попыток !
 #Введите букву:
-
-words = ["лом", "космос", "ракета"]
-det = ["Против него нет приема", "Относительно пустые участки Вселенной, которые лежат вне границ атмосфер небесных тел", "Летательный аппарат для полета  космос"]
-print("Выберите вопрос введя цыфру от 1 до 3")
-zadanvopr = int(input())
-if zadanvopr == 1:
-    print(det[0])
-    word1 = ["л", "о", "м"]
-    mass = ["*", "*", "*"]
-    while word1 == mass:
-        for i in word1:
-             mass = ["*", "*", "*"]
-             intw = str(input())
-             if intw == i:
-                b = word1.index(i)
-                if b == 0:
-                    mass[0] = 'л'
-                    print(mass)
-                elif b == 1:
-                    mass[1] = 'о'
-                    print(mass)
-                elif b == 2:
-                    mass[2] = 'м'
-                    print(mass)
-                elif intw != i:
-                    print("Буква не верна")
-
-
-
-
-
-elif zadanvopr == 2:
-    print(det[1])
-elif zadanvopr == 3:
-    print(det[2])

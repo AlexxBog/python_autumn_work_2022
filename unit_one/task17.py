@@ -8,11 +8,11 @@ prices = {
   "pear": 3
 }
 
-def compute_bill():
+def compute_bill(i):
   sm = prices.values()
   x = 0
   for i in sm:
     x = x + i
   return x
-print(compute_bill())
+print(compute_bill(4))
 
