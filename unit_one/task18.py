@@ -8,16 +8,23 @@
 #........................................
 #Выводы комбинаций оформить в список кортежей.
 
-import random
-def dice():
-    a = random.randint(1, 6)
-    return a
-def dice_1():
-    b = random.randint(1, 6)
-    return b
-print(dice(), dice_1())
-summ = dice() + dice_1()
-print(summ)
+def combo(x, y):
+    res = {}
+    for i in x:
+        for j in y:
+            summ = i + j
+            if summ not in res:
+                res[summ] = [(i, j)]
+            else:
+                res[summ] = res.get(summ) + [(i, j)]
+    return res
+
+
+dice_1 = [1, 2, 3, 4, 5, 6]
+dice_2 = [1, 2, 3, 4, 5, 6]
+
+for key, var in combo(dice_1, dice_2).items():
+    print("Сумма", key, "комбинация", var)
 
 
 
