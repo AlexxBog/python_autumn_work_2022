@@ -22,8 +22,28 @@ template = """
 </html>
 """
 
-file = open("index.html", "w")
-val = page.values()
-for i in val:
+page = {"title": "Тег BODY",
+        "charset": "utf-8",
+        "alert": "Документ загружен",
+        "p": "Ut wisis enim ad minim veniam,  suscipit lobortis nisl ut aliquip ex ea commodo consequat."}
+
+temp = open("template.txt", "rt")
+f = open("index.html", "wt")
+
+lines = temp.readlines()
+
+for line in lines:
+    flag = 0
+    for key, var in page.items():
+        if key in line:
+            flag = 1
+            piece = line.split("?")
+            f.write(piece[0] + var + piece[1])
+    if flag == 0:
+        f.write(line)
+
+temp.close()
+f.close()
+print("Создание файла выполнено")
 
 

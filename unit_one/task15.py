@@ -52,7 +52,7 @@ if zadanvopr == 1:
                     print("Буква не верна")
 
 
-
+1]
 
 
 elif zadanvopr == 2:
