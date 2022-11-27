@@ -6,22 +6,41 @@ conn = psycopg2.connect(
     user="postgres",
     password="4832")
 print(conn)
-cur = conn.cursor()
-id_student = int(input("Введите имя студента:"))
-SQL_GET_TASK_BY_STUDENT = f"""
 
-SELECT * 
-FROM publiv.accaunts
-WHERE id = {id_student}
+#Пишем первый запрос
+cur = conn.cursor()
+new = """ 
+
+SELECT *
+FROM project.client
 
 """
 
-
-cur.execute(SQL_GET_TASK_BY_STUDENT)
+cur.execute(new)
 records = cur.fetchall()
 for row in records:
     print(row)
 
-conn.close()
 
-print(conn)
+
+#Пишем второй запрос
+
+cur = conn.cursor()
+new = """ 
+
+SELECT *
+FROM project.company
+
+"""
+
+cur.execute(new)
+records = cur.fetchall()
+for row in records:
+    print(row)
+
+
+
+
+
+
+conn.close()
