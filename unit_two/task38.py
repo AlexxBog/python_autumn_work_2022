@@ -4,3 +4,5 @@
 #  3. Установить ассинхронную библиотеку https://docs.aiohttp.org/en/stable/
 #  получить через нее всех игроков (/users/list) см. https://docs.aiohttp.org/en/stable/client_quickstart.html#json-response-content
 #  JSON Response Content¶
+
+
